@@ -31,12 +31,14 @@ body{
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top ;
-    display: grid;
-    place-items: center;
-    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
 }
 .card{
-    max-width: 500px;
+    max-width: 34.375rem;
     border-radius: 8px;
     border: none;
     background-color: var(--clr-White);
@@ -44,7 +46,7 @@ body{
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 30px;
+    padding: 1.875rem;
 }
 .card__header{
     display: flex;
@@ -58,15 +60,15 @@ body{
    height: 30px;
 }
 .card__faq h1{
-   font-size: 20px;
+   font-size: 1.5625rem;
    font-weight: var(--fw-semibold);
-
+   color: var(--clr-Purple-950);
 }
 .faq__item{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 15px 0;
+    padding: 0.9375rem 0;
     width: 100%;
     border-bottom: 1px solid var(--clr-Purple-100);
 }
@@ -78,30 +80,30 @@ body{
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 1.25rem;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 .faq__question:hover h2{
-    color: #AD28EB;
+    color: var(--clr-Purple-600);
     cursor: pointer;
 }
 .faq__q1{
-    font-size: 13px;
+    font-size: 1rem;
     font-weight: var(--fw-semibold);
     color: var(--clr-Purple-950);
 
 }
 .faq__icon{
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
     align-items: end;
     justify-content: end;
 }
 .faq__description{
-    font-size: 12px;
+    font-size: 0.875rem;
     color: var(--clr-Purple-600);
     line-height: 1.5;
     font-weight:var(--fw-light) ;
@@ -109,61 +111,69 @@ body{
 }
 .faq__q2{
       color: var(--clr-Purple-950);
-     font-size: 13px;
+     font-size: 1rem;
     font-weight: var(--fw-semibold);
 }
 .faq2__des{
-    font-size: 12px;
+    font-size: 0.875rem;
     color: var(--clr-Purple-600);
     line-height: 1.5;
     font-weight:var(--fw-light) ;
-   display: none;
+    display: none;
 }
 .faq__q3{
-     color: var(--clr-Purple-950);
-    font-size: 13px;
+    color: var(--clr-Purple-950);
+    font-size: 1rem;
     font-weight: var(--fw-semibold);
 }
 .faq3__des{
-    font-size: 12px;
+    font-size: 0.875rem;
     color: var(--clr-Purple-600);
     line-height: 1.5;
     font-weight:var(--fw-light) ;
-   display: none;
+    display: none;
 }
 .faq__q4{
     color: var(--clr-Purple-950);
-    font-size: 13px;
+    font-size: 1rem;
     font-weight: var(--fw-semibold);
 }
 .faq4__des{
-    font-size: 12px;
+    font-size: 0.875rem;
     color: var(--clr-Purple-600);
     line-height: 1.5;
     font-weight:var(--fw-light) ;
     display: none;
 }
 .show-answer {
-    display: block !important;
+    display: block;
 }
 .attribution { 
     font-size: 11px;
     text-align: center; 
-    bottom: 10px;
-    position: absolute;
-    width: 100%;
+    
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
-@media(max-width:600px){
+@media(max-width:37.5rem){
     body{
         background-image: url('../images/background-pattern-mobile.svg');
-        background-size: contain;
+        background-size: 100% auto;
     }
     .card{
-        max-width: 327px;
-        margin: 0 24px;
-        padding: 24px;
+        max-width: 20.4375rem;
+        margin: 0 1.5rem;
+        padding: 1.5rem;
     }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
